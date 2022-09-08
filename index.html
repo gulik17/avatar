@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/css/style-gss.css?v=3">
+    <link rel="stylesheet" href="/css/style.css?v=3">
+    <title>Создать аватар — GLOBAL EVENT FORUM</title>
+</head>
+
+<body>
+	<div class="main">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="/">GLOBAL EVENT FORUM</a>
+			</div>
+		</nav>
+
+		<div style="padding: 15px; color: grey; background: rgba(0, 0, 0, 0.3); position: fixed; bottom: 0px; right: 20px; z-index: 1100; font-size: 15px;display: none;" id="mobileCropper_cancel">Отмена</div>
+		<div style="padding: 15px; color: grey; background: rgba(0, 0, 0, 0.3); position: fixed; bottom: 0px; left: 20px; z-index: 1100; font-size: 15px;display: none;" id="mobileCropper_getResult">Загрузить</div>
+    
+		<main class="avatar">
+			<div class="container">
+				<div class="mob-top-bg d-block d-md-none"></div>
+				<div class="mob-mid-bg d-block d-md-none"></div>
+				<div class="mob-bot-bg d-block d-md-none"></div>
+				<div class="back d-none d-md-block"></div>
+				<div class="phone d-none d-md-block"></div>
+				<div class="mobile-back"></div>
+				<div class="mobile-phone"></div>
+				<div class="gss-avatar row">
+					<div class="col-md-8">
+						<div class="block_left">
+							<div class="title">
+								ХОЧУ<br class="d-block d-md-none" /> КРУТОЙ<br /><span>АВАТАР</span>
+							</div>
+							<div class="subtitle">
+								Сгенерируй крутой аватар<br />в стиле GLOBAL EVENT FORUM<br /> в пару кликов
+							</div>
+							<ul>
+								<li>Загрузи селфи в формате <b>JPG</b></li>
+								<li>Выбери один из вариантов</li>
+								<li>Забирай готовую аватарку<br />абсолютно фри :)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 d-md-flex justify-content-md-end">
+						<div class="frame block_right">
+							<form id="imageform" method="post" action="/ajaxImageUpload.php" style="clear:both">
+								<div id="imageloadstatus" style="display:none;"><img src="/loader.gif"
+										style="width: 100%;" alt="Uploading...." /></div>
+								<div id="imageloadbutton">
+									<div class="file_upload">
+										<div id="carousel-avatar" class="owl-carousel owl-theme">
+											<div class="item">
+												<button class="upload" type="button"><img src="images/frame.svg" alt=""></button>
+												<input type="file" name="photos[]" id="photoimg" accept="image/jpeg" />
+												<input type="hidden" class="img_layer_item" value="/layer/01.png" />
+											</div>
+											<div class="item">
+												<button class="upload" type="button"><img src="images/frame.svg" alt=""></button>
+												<input type="hidden" class="img_layer_item" value="/layer/02.png" />
+											</div>
+											<div class="item">
+												<button class="upload" type="button"><img src="images/frame.svg" alt=""></button>
+												<input type="hidden" class="img_layer_item" value="/layer/03.png" />
+											</div>
+											<div class="item">
+												<button class="upload" type="button"><img src="images/frame.svg" alt=""></button>
+												<input type="hidden" class="img_layer_item" value="/layer/04.png" />
+											</div>
+										</div>
+										<div class="counter">Вариант 1 из 4</div>
+									</div>
+									<input type="hidden" name="img_original" class="img_original" />
+									<!-- Путь к оригиналу -->
+									<input type="hidden" name="img_final" class="img_final" />
+									<!-- Путь к обработанному изображению -->
+									<input type="hidden" name="img_layer" class="img_layer" value="/layer/01.png" />
+								</div>
+								<div class="share mb-2">
+									<a class="download" href="" download="">Скачать фото</a>
+									<a class="clear_form" href="/">Очистить форму</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid phone-mob d-md-none d-block"></div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="title">
+							GLOBAL EVENT FORUM
+						</div>
+						<div class="subtitle d-none d-md-block">
+							8 800 600 53 90 (Горячая линия)
+							GASTREET - International Restaurant Show<br />
+							Услуги оказывает Общество с ограниченной ответственностью «СИРОККО»<br />
+							354000, ул. Грибоедова, д 10Б. ИНН 2367026046, ОГРН 1222300036232
+						</div>
+					</div>
+					<div class="col-md-6 socnet d-flex align-items-center justify-content-center justify-content-md-end">
+						<div class="d-none d-md-block">Мы на связи</div>
+						<div class="footer-icon d-flex d-md-block">
+							<div class="first">
+								<a href="https://www.youtube.com/channel/UCR0Hbi9F9TDvESpkQUSU_KA" target="_blank"><img src="/images/youtube.svg" alt=""></a>
+								<a href="https://t.me/GLOBALEVENTFEST" target="_blank"><img src="/images/tg.svg" alt=""></a>
+							</div>
+							<div>
+								<a href="mailto:112@gefforum.com"><img src="/images/mail.svg" alt=""></a>
+								<a href="tel:88006005390"><img src="/images/phone.svg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 d-block d-md-none">
+						<div class="subtitle text-center">
+							8 800 600 53 90 (Горячая линия)
+							GASTREET - International Restaurant Show
+							Услуги оказывает Общество с ограниченной ответственностью «СИРОККО»
+							354000, ул. Грибоедова, д 10Б. ИНН 2367026046, ОГРН 1222300036232
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="blockScreen" style="text-align:center; display: none;">
+        <div class="popup_box_container"
+            style="min-width: 600px;display: inline-block; height: auto; margin-top: 10px;">
+            <div class="box_layout">
+                <div class="box_title_wrap box_grey">
+                    <div class="box_title">Вы можете выбрать область</div>
+                </div>
+                <div class="box_body box_no_buttons" style="display: block; padding: 0px; position: relative;">
+                    <div class="owner_photo_box ">
+                        <div id="owner_photo_edit">
+                            <div class="owner_photo_content">
+                                <div class="owner_photo_thumb no_rotate" id="owner_photo_thumb">
+                                    <div id="tmpBlock"></div>
+                                </div>
+                                <div class="owner_photo_controls">
+                                    <button class="flat_button" id="owner_photo_done_edit">Загрузить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/cropper.js?v=2"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js?v=2"></script>
+
+</html>
